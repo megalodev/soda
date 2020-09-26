@@ -5,3 +5,7 @@
 # Reviewers
 
 *Add reviewers before doing PR and select the reviewers who are already available.*
+
+# Assignees
+
+*Assign an assignee to someone responsible for the area (who will receive homework after the review is complete).*
