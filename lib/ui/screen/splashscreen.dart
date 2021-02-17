@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:soda/ui/home.dart';
+import 'package:soda/ui/screen/login/login_page.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 class Splash extends StatelessWidget {
@@ -8,11 +8,10 @@ class Splash extends StatelessWidget {
     return new SplashScreen(
       backgroundColor: Colors.white,
       seconds: 3,
-      // useLoader: true,
+      useLoader: true,
       image: Image.asset('assets/img/icon.png'),
-      photoSize: MediaQuery.of(context).size.width % 100.8,
-
-      navigateAfterSeconds: Home(),
+      photoSize: 100.0,
+      navigateAfterSeconds: LoginPage(),
     );
   }
 }

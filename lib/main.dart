@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:soda/helpers/color_helper.dart';
-import 'package:soda/ui/home.dart';
+import 'package:soda/ui/screen/login/login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: SmarakTheme.theme,
       title: 'SMARAK App',
-      home: Home(),
+      home: LoginPage(),
     );
   }
 }
@@ -41,6 +41,7 @@ class SmarakTheme {
     final originalBody1 = originalTextTheme.bodyText1;
 
     return ThemeData.light().copyWith(
+      platform: TargetPlatform.android,
       primaryColor: ColorHelper.fromHex('4BB543'),
       accentColor: Colors.cyan[300],
       buttonColor: ColorHelper.fromHex('4BB543'),
