@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soda/ui/home.dart';
 import 'package:soda/ui/widgets/custom_button.dart';
 import 'package:soda/ui/widgets/custom_form_field.dart';
 
@@ -95,7 +96,12 @@ class _LoginFormState extends State<LoginForm> {
               ),
               CustomButton.defaultButton(
                 onPressed: () {
-                  print('object 1');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Home(),
+                    ),
+                  );
                 },
                 title: "Login",
                 width: MediaQuery.of(context).size.width,
@@ -121,6 +127,13 @@ class _LoginFormState extends State<LoginForm> {
       ),
     );
   }
+
+  // _reouteTo(BuildContext context, Widget routeTo) => Navigator.push(
+  //       context,
+  //       MaterialPageRoute(
+  //         builder: (context) => routeTo,
+  //       ),
+  //     );
 
   ///pilih satu! child atau children atau rowChildren.
   ///jika [child != null] && [children != null] && [rowChildren != null]
