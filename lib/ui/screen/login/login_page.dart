@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:soda/helpers/color_helper.dart';
-import 'package:soda/ui/screens/register/register_form.dart';
+import 'package:soda/ui/screen/login/login_form.dart';
 
-class RegisterPage extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,26 +19,7 @@ class RegisterPage extends StatelessWidget {
           padding: EdgeInsets.only(
             top: 40.0 - MediaQuery.of(context).padding.top,
           ),
-          child: RegisterForm(),
-        ),
-        Positioned(
-          top: MediaQuery.of(context).padding.top * 2.4,
-          left: 12.0,
-          child: GestureDetector(
-            onTap: () {
-              print('---------------------------->>> >> > on Tap');
-              Navigator.pop(context);
-            },
-            child: Container(
-              height: 40.0,
-              width: 40.0,
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              child: Icon(Icons.arrow_back_ios_outlined),
-            ),
-          ),
+          child: LoginForm(),
         ),
       ],
     );

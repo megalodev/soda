@@ -13,7 +13,7 @@ class CustomFormField extends StatelessWidget {
   final TextStyle hintStyle;
   final TextInputType keyboardType;
   final int maxLength;
-  final List<TextInputFormatter> inputFormaters;
+  final List<TextInputFormatter> inputFormater;
   final double latterSpacing;
   final Function(String) validator;
 
@@ -26,7 +26,7 @@ class CustomFormField extends StatelessWidget {
     this.style,
     this.keyboardType,
     this.maxLength,
-    this.inputFormaters,
+    this.inputFormater,
     this.suffixIcon,
     this.icon,
     this.latterSpacing,
@@ -43,16 +43,14 @@ class CustomFormField extends StatelessWidget {
       controller: controller,
       style: style == null
           ? TextStyle(
-              fontSize: 16,
-              color: Colors.black87,
-              letterSpacing: latterSpacing,
-            )
+              fontSize: 16, color: Colors.black87, letterSpacing: latterSpacing)
           : style,
       textAlign: textAlign == null ? TextAlign.left : textAlign,
       obscureText: obscureText ?? false,
       keyboardType: keyboardType == null ? TextInputType.text : keyboardType,
       maxLength: maxLength,
-      inputFormatters: inputFormaters,
+      inputFormatters: inputFormater,
+
       decoration: InputDecoration(
         contentPadding: EdgeInsets.only(
           left: 16.0,
@@ -69,9 +67,12 @@ class CustomFormField extends StatelessWidget {
             : hintStyle,
         filled: true,
         fillColor: Colors.white,
+        // counter: Text(maxLength.toString()),
+        // counterText: maxLength.toString(),
+        // counterStyle: TextStyle(fontSize: 0.0),
         icon: icon,
         hintText: hintText,
-        enabled: true,
+
         border: _inputBorder(),
         focusedBorder: _inputBorder(
           color: Colors.amber,
@@ -80,6 +81,7 @@ class CustomFormField extends StatelessWidget {
         enabledBorder: _inputBorder(),
         suffixIcon: suffixIcon,
       ),
+      // ),
     );
   }
 
