@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:soda/ui/home.dart';
+import 'package:soda/ui/screens/register/register_page.dart';
 import 'package:soda/ui/widgets/custom_button.dart';
 import 'package:soda/ui/widgets/custom_form_field.dart';
 
@@ -117,9 +118,19 @@ class _LoginFormState extends State<LoginForm> {
               _text(
                 text: 'Belum punya akun?',
               ),
-              _text(
-                text: ' Daftar',
-                color: Colors.blue,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RegisterPage(),
+                    ),
+                  );
+                },
+                child: _text(
+                  text: ' Daftar',
+                  color: Colors.blue,
+                ),
               ),
             ],
           ),
