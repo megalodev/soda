@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:soda/ui/screen/login/login_page.dart';
+import 'package:soda/ui/screens/login/login_page.dart';
 import 'package:flutter/services.dart';
 import 'package:soda/helpers/color_helper.dart';
 
