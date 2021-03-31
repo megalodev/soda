@@ -32,19 +32,19 @@ class _RegisterFormState extends State<RegisterForm> {
       bottom: true,
       child: Container(
         height: MediaQuery.of(context).size.height - padding,
-        padding: EdgeInsets.only(top: padding),
+        // padding: EdgeInsets.only(top: 40.0 - padding),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30.0),
-            topRight: Radius.circular(30.0),
+            topLeft: Radius.circular(24.0),
+            topRight: Radius.circular(24.0),
           ),
           color: Colors.white,
         ),
         child: Container(
           padding: EdgeInsets.only(
             // top: 38.0,
-            left: 20.0,
-            right: 20.0,
+            left: 24.0,
+            right: 24.0,
             // bottom: 36.0,
           ),
           child: Form(
@@ -73,7 +73,11 @@ class _RegisterFormState extends State<RegisterForm> {
       shrinkWrap: true,
       children: [
         SizedBox(
-          height: 48.0,
+          height: 20.0,
+        ),
+        _backButton(),
+        SizedBox(
+          height: 10.0,
         ),
         _text(
           text: 'Daftar akun',
@@ -156,12 +160,40 @@ class _RegisterFormState extends State<RegisterForm> {
           titleColors: Colors.white,
           buttonDefaultColors: Colors.green,
         ),
-        SizedBox(
-          height: 68.0,
-        ),
       ],
     );
   }
+
+  _backButton() => Container(
+        child: Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: GestureDetector(
+                onTap: () {
+                  print('---------------------------->>> >> > on Tap');
+                  Navigator.pop(context);
+                },
+                child: Container(
+                  height: 40.0,
+                  width: 30.0,
+                  alignment: Alignment.centerLeft,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  padding: EdgeInsets.only(left: 8.0),
+                  child: Icon(Icons.arrow_back_ios_outlined),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 9,
+              child: SizedBox(),
+            ),
+          ],
+        ),
+      );
 
   _checkBox(List<bool> items) {
     return Container(

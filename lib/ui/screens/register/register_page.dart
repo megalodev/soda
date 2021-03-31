@@ -17,29 +17,30 @@ class RegisterPage extends StatelessWidget {
         _appbar(context),
         Container(
           padding: EdgeInsets.only(
-            top: 40.0 - MediaQuery.of(context).padding.top,
+            // top: MediaQuery.of(context).padding.top,
+            top: 8.0,
           ),
           child: RegisterForm(),
         ),
-        Positioned(
-          top: MediaQuery.of(context).padding.top * 2.4,
-          left: 12.0,
-          child: GestureDetector(
-            onTap: () {
-              print('---------------------------->>> >> > on Tap');
-              Navigator.pop(context);
-            },
-            child: Container(
-              height: 40.0,
-              width: 40.0,
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              child: Icon(Icons.arrow_back_ios_outlined),
-            ),
-          ),
-        ),
+        // Positioned(
+        //   top: MediaQuery.of(context).padding.top * 2.4,
+        //   left: 12.0,
+        //   child: GestureDetector(
+        //     onTap: () {
+        //       print('---------------------------->>> >> > on Tap');
+        //       Navigator.pop(context);
+        //     },
+        //     child: Container(
+        //       height: 40.0,
+        //       width: 40.0,
+        //       decoration: BoxDecoration(
+        //         color: Colors.grey[300],
+        //         borderRadius: BorderRadius.circular(5.0),
+        //       ),
+        //       child: Icon(Icons.arrow_back_ios_outlined),
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }
