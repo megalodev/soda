@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soda/helpers/color_helper.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height;
@@ -35,14 +36,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Colors.yellow[700],
-            Colors.orange,
-            Colors.orange[700],
-            Colors.orange[900]
+            ColorHelper.fromHex('#51E69B'),
+            ColorHelper.fromHex('#26C5F9'),
           ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          stops: [0.0, 0.5, 0.7, 0.9],
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          stops: [0.0, 0.9],
         ),
         boxShadow: shadow
             ? [

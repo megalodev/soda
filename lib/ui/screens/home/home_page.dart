@@ -1,28 +1,30 @@
+import 'package:clippy_flutter/arc.dart';
 import 'package:flutter/material.dart';
 import 'package:soda/helpers/color_helper.dart';
-import 'package:soda/ui/screen/login/login_form.dart';
+import 'package:soda/ui/screens/home/home_view.dart';
 
-class LoginPage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildBody(context),
-    );
-  }
-
-  Widget _buildBody(BuildContext context) {
     return Stack(
       alignment: Alignment.topCenter,
       children: [
-        _appbar(context),
-        Container(
-          padding: EdgeInsets.only(
-            top: 40.0 - MediaQuery.of(context).padding.top,
-          ),
-          child: LoginForm(),
+        Arc(
+          edge: Edge.BOTTOM,
+          arcType: ArcType.CONVEX,
+          height: 60,
+          child: _appbar(context, height: 360),
+        ),
+        ListView(
+          shrinkWrap: true,
+          physics: ClampingScrollPhysics(),
+          children: [
+            HomeView(),
+          ],
         ),
       ],
     );
+    // return _appbar(context);
   }
 
   Widget _appbar(

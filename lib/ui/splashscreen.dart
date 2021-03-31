@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:soda/ui/screen/login/login_page.dart';
+import 'package:soda/ui/screens/login/login_page.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 class Splash extends StatelessWidget {
